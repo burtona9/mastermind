@@ -1,19 +1,19 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .my-container{
-    @apply w-screen flex flex-col justify-center; 
+    @apply w-screen; 
 }
 
 .game-row{
-    @apply w-2/5 flex flex justify-evenly mt-2 mb-2;
+    @apply w-screen flex flex justify-evenly mt-2 mb-2 m-auto;
 }
 .game-row-hidden{
     @apply hidden;
 }
 .box{
-    @apply w-20 h-20 grid justify-center items-center mr-1;
+    @apply w-1/5 h-20 grid justify-center items-center mr-1;
 }
 
 .color-dot {
@@ -75,4 +75,91 @@
   }
   .btn-light:hover {
     @apply bg-gray-100
+  } */
+
+
+  .my-container{
+      width:100%;
   }
+  .game-row{
+      width:100%;
+      display:flex;
+      justify-content: space-around;
+      height:100px;
+      margin-bottom: 10px;
+
+  }
+  .box{ 
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height:100%; 
+    width:20%; 
+    border: solid white 3px;
+    margin-left:5px;
+}
+
+  .color-dot{
+      width:50px;
+      height:50px;
+      border-radius:80%;
+      border:solid grey 2px;
+  }
+
+  .game-row-hidden{
+      display:none;
+  }
+   .colour-picker{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+   }
+  .colour-panel{
+    width:100%;
+
+    border:solid grey 2px;
+    padding:15px;
+}
+.color-pick{
+    width:50px;
+    height:100%;
+    border:solid 1px black;
+}
+.color-red{
+    background-color:darkred;
+}
+.color-blue{
+    background-color:darkblue;
+}
+.color-green{
+    background-color:darkgreen;
+
+}
+.color-yellow{
+    background-color:yellow;
+}
+.color-orange{
+    background-color:orange;
+}
+.color-pink{
+    background-color:pink;
+}
+
+.dot-focus{
+    outline:orange 3px dashed;
+    outline-offset: 5px;
+}
+.correct{
+    border-color:darkgreen;
+}
+.nearly{
+    border-color:orange;
+}
+
+.button-row{
+    display: flex;
+    justify-content: space-between;
+    margin:15px;
+}
+
