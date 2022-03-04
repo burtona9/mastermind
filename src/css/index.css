@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-container{
+    @apply w-screen flex flex-col justify-center; 
+}
+
+.game-row{
+    @apply w-2/5 flex flex justify-evenly mt-2 mb-2;
+}
+.game-row-hidden{
+    @apply hidden;
+}
+.box{
+    @apply w-20 h-20 grid justify-center items-center mr-1;
+}
+
+.color-dot {
+    @apply border border-black border-solid rounded-3xl w-12 h-12;
+}
+
+.correct{
+    @apply border-green-300 border-4;
+}
+.nearly{
+    @apply border border-amber-400 border-4;
+}
+
+.color-panel{
+    width:500px;
+    height:50px;
+}
+.color-pick{
+    width:50px;
+    height:100%;
+    border:solid 1px black;
+}
+.color-red{
+    @apply bg-red-500;
+}
+.color-blue{
+    @apply bg-blue-500;
+}
+.color-green{
+    @apply bg-green-500;
+}
+.color-yellow{
+    @apply bg-yellow-500;
+}
+.color-orange{
+    @apply bg-orange-500;
+}
+.color-pink{
+    @apply bg-pink-500;
+}
+
+.dot-focus{
+    outline:orange 3px dashed;
+    outline-offset: 5px;
+}
+
+.btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+
+  .btn-light{
+    @apply bg-white text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow
+  }
+  .btn-light:hover {
+    @apply bg-gray-100
+  }
