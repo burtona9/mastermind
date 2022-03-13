@@ -164,9 +164,5 @@
 .hide-panel{
     display: none;
 }
-#gameOver{
-    display: none;
-}
-.game-over{
-    display:block !important;
-}
+
+
