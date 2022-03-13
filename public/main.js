@@ -39,6 +39,9 @@ function startGame(){
                 setGameOver();
             }
             else{
+                let lastdot = boxesArray[4].getElementsByClassName(DOT_CLASS);
+                console.log('3');
+                removePreviousFocus(boxesArray[4].getElementsByClassName(DOT_CLASS));
                 currentRound++;
                 gameRows[currentRound-1].classList.add('game-row');
                 gameRows[currentRound-1].classList.remove('game-row-hidden');

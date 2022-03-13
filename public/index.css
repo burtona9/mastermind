@@ -151,7 +151,7 @@
     outline-offset: 5px;
 }
 .correct{
-    border-color:darkgreen;
+    border-color:greenyellow;
 }
 .nearly{
     border-color:orange;
@@ -161,5 +161,9 @@
     display: flex;
     justify-content: space-between;
     margin:15px;
+}
+
+.row-complete{
+    background-color:#9e9e9e;
 }
 

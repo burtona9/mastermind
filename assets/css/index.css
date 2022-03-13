@@ -126,23 +126,22 @@
     height:100%;
     border:solid 1px black;
 }
-.color-red{
+[data-colour="red"]{
     background-color:darkred;
 }
-.color-blue{
+[data-colour="blue"]{
     background-color:darkblue;
 }
-.color-green{
+[data-colour="green"]{
     background-color:darkgreen;
-
 }
-.color-yellow{
+[data-colour="yellow"]{
     background-color:yellow;
 }
-.color-orange{
+[data-colour="orange"]{
     background-color:orange;
 }
-.color-pink{
+[data-colour="pink"]{
     background-color:pink;
 }
 
@@ -162,4 +161,12 @@
     justify-content: space-between;
     margin:15px;
 }
-
+.hide-panel{
+    display: none;
+}
+#gameOver{
+    display: none;
+}
+.game-over{
+    display:block !important;
+}
