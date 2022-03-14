@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let gameRowIndex = 0;
     let currentGameRow = gameRows[gameRowIndex];
     let answer = setResult();
-    console.log(answer);
 
     for(let picker of pickers) {
         picker.addEventListener('click',function(event){
@@ -83,7 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 allBoxes[dotIndex-i].classList.add("correct");
                 numCorrect++;
                 correctAnswers.add(colour);
-            } else if(answer.includes(colour) && !correctAnswers.has(colour)){
+            }
+        }
+        for(let i=4; i>-1; i--){
+            let colour = allDots[dotIndex - i].dataset.colour;
+            if(answer.includes(colour) && !correctAnswers.has(colour)){
                 allBoxes[dotIndex-i].classList.add("nearly");   
             }
         }
@@ -131,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         restartButton.classList.add(DISPLAY_NONE_CLASS);
         endOfGameDisplay.classList.add(DISPLAY_NONE_CLASS);
         colourPanel.classList.remove(DISPLAY_NONE_CLASS);
+        answer = setResult();
     })
 
     deleteButton.addEventListener('click',function(){
