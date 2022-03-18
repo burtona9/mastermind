@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for(let i=4; i>-1; i--){
             let colour = allDots[dotIndex - i].dataset.colour;
             if(answer.includes(colour) && !correctAnswers.has(colour)){
-                allBoxes[dotIndex-i].classList.add("nearly");   
+                allBoxes[dotIndex-i].classList.add("nearly"); 
             }
         }
         if(numCorrect === 5){
