@@ -29,6 +29,34 @@ document.addEventListener('DOMContentLoaded', function () {
     let gameRowIndex = 0;
     let currentGameRow = gameRows[gameRowIndex];
     let answer = setResult();
+    
+    for(let i=0; i<allBoxes.length; i++){
+        allBoxes[i].addEventListener('click', function(event){
+            
+            console.log(allDots[i].dataset.colour);
+            let nextColourIndex = 0;
+            if(allDots[i].dataset.colour){
+                nextColourIndex = COLOURS.findIndex((colour) => colour === allDots[i].dataset.colour) + 1;
+                if(nextColourIndex > 5) nextColourIndex = 0;
+                
+            } else {
+                nextColourIndex = 0;
+            }
+            allDots[i].dataset.colour = COLOURS[nextColourIndex];
+
+            currentDot.classList.remove(DOT_FOCUS_CLASS);
+            dotIndex = i;
+            if(isEndOfRow()) {
+                currentDot = allDots[i]
+            }
+            else{
+                currentDotIndex = ( i + 1 );
+                currentDot = allDots[i];
+            }
+            currentDot.classList.add(DOT_FOCUS_CLASS);
+            
+        });
+    }
 
     for(let picker of pickers) {
         picker.addEventListener('click',function(event){
